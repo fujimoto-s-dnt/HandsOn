@@ -1,0 +1,18 @@
+# docker buildx build . -f Scripts/docker/Dockerfile-Mock -t mixch-quiz/mock
+FROM denoland/deno:alpine-1.39.0
+
+EXPOSE 5555
+
+WORKDIR /app
+COPY . .
+
+# Denoの依存ライブラリをキャッシュする
+RUN deno cache src/deps.ts
+RUN deno cache src/server.ts
+
+RUN mkdir -p /var/tmp/log
+
+# Denoを全解放で起動
+# モックを使う分にはこれでいいんだけど、
+# なんか違うことやるなら、Denoの仕様読んでから変えましょう
+CMD ["run", "--allow-all", "src/server.ts"]

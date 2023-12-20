@@ -1,0 +1,13 @@
+version: '3.9'
+
+services:
+  apiServer:
+    container_name: api-server
+    image: hands-on/server
+    platform: linux/arm64
+    build:
+      context: ../Server
+      dockerfile: ../Docker/Server-Dockerfile
+    restart: unless-stopped
+    ports: # ツール自体は5555で走るので、8000は適宜変更をお願いします。
+      - "127.0.0.1:${DENO_MOCK_PORT:-8000}:5555"

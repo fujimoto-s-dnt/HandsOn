@@ -1,0 +1,61 @@
+{
+    "characterMaster": {
+        "master": [
+            {
+                "id": 1,
+                "name": "001",
+                "hp": 10,
+                "minDmg": 2,
+                "maxDmg": 4,
+                "addHpOnLvUp": 2,
+                "addMinDmgOnLvUp": 1,
+                "addMaxDmgOnLvUp": 2,
+                "image": "001"
+            },
+            {
+                "id": 2,
+                "name": "002",
+                "hp": 15,
+                "minDmg": 1,
+                "maxDmg": 3,
+                "addHpOnLvUp": 2,
+                "addMinDmgOnLvUp": 1,
+                "addMaxDmgOnLvUp": 2,
+                "image": "002"
+            },
+            {
+                "id": 3,
+                "name": "003",
+                "hp": 8,
+                "minDmg": 4,
+                "maxDmg": 8,
+                "addHpOnLvUp": 2,
+                "addMinDmgOnLvUp": 1,
+                "addMaxDmgOnLvUp": 2,
+                "image": "003"
+            }
+        ]
+    },
+    "playerDataDefault": {
+        "startingCardId": 1
+    },
+    "stageMaster": {
+        "easyEnemyId": 1,
+        "normalEnemyId": 2,
+        "hardEnemyId": 3
+    },
+    "gachaMaster": [
+        {
+            "id": 1,
+            "weight": 10
+        },
+        {
+            "id": 2,
+            "weight": 5
+        },
+        {
+            "id": 3,
+            "weight": 3
+        }
+    ]
+}
