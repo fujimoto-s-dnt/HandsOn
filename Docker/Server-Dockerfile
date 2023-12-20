@@ -1,5 +1,6 @@
 # docker buildx build . -f Scripts/docker/Dockerfile-Mock -t mixch-quiz/mock
-FROM denoland/deno:alpine-1.39.0
+FROM denoland/deno:1.39.0
+
 
 EXPOSE 5555
 
